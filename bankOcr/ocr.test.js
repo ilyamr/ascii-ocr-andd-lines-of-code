@@ -1,6 +1,4 @@
 const fs = require('fs');
-const path = require('path'); 
-
 const {getDigitNumbersFromAsciiString} = require('./ocr.js');
 
 
@@ -18,7 +16,7 @@ it(`OCR. Reads test file with ASCII symbols and checks if it contains 123456789 
      res.push(asciiNumber);
     }
 
-    expect(res.toString()).toBe(expected.toString());
+    expect(res).toEqual(expected)
   });
 })
 
@@ -36,6 +34,6 @@ it(`OCR. Reads test file with ASCII symbols and checks if it contains errors`, (
      res.push(asciiNumber);
     }
 
-    expect(res.toString()).toBe(expected.toString());
+    expect(res).toEqual(expected);
   });
 })

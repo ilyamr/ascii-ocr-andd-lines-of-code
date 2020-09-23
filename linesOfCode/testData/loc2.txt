@@ -1,0 +1,17 @@
+  const testFile = __dirname + '/testData/loc1.txt';
+  const expected = {
+      totalLines: 33, /*
+                    another onlyCommentLines
+                    f
+                    f
+                    */
+
+      emptyLines: 13,
+      onlyCommentLines: 7, // here's the comment
+      totalCodeLines: 12
+
+  };
+ // sample comment 
+  return fs.readFile(testFile, (err, data) => {
+    if (err) throw err;
+    const res = co;
