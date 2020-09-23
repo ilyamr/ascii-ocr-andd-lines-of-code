@@ -51,12 +51,4 @@ function countLines(input) {
   }
 }
 
-
-// let fileContent = fs.readFile(__dirname + '/testData/loc.txt', (err, data) => {
-//   if(err) throw err;
-  
-//   console.log(countLines(data.toString()));
-// });
-
 module.exports = countLines;
-
