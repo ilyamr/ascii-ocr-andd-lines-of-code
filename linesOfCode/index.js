@@ -1,5 +1,4 @@
-var fs = require('fs');
-
+const fs = require('fs');
 
 function countLines(input) {
 
@@ -33,11 +32,6 @@ function countLines(input) {
     return res;
 
   }
-  else {
-    return 
-  }
-  
-  // return input.match(regexEmptyLines);
 }
 
 function trimWhiteSpaces(input) {
@@ -57,8 +51,7 @@ function getTotalNumberOfLines(input) {
 
 
 
-
-let fileContent = fs.readFile('./testData/loc.txt', (err, data) => {
+let fileContent = fs.readFile(__dirname + '/testData/loc.txt', (err, data) => {
   if(err) throw err;
   
   console.log(countLines(data.toString()));
