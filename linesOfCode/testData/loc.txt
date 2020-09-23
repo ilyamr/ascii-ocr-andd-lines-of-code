@@ -1,0 +1,34 @@
+        console.log('processing');
+		    
+        let url = 'http://google.com';
+
+        let stringsInsideComments =/* " a */ "b";
+
+        //fas
+
+        //Count total
+        let lines = content.split(/\r|\r\n|\n/);
+        let total_lines = lines.length; //ghgh
+
+        let multipleLineStrings = `f 
+        ffasf
+
+        asffsaf
+        `;
+
+
+        //Count comments like  
+        /*fasf  
+
+		   
+        fasasf
+        asffsaf
+        
+
+        fsa*/
+        
+        let comment = content.replace(/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+/g,"");
+        let comment2 = comment.split(/\r|\r\n|\n/);
+        //yo
+        let comment_lines = total_lines - comment2.length;
+        console.log(comment_lines);
